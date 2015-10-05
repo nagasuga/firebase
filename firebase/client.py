@@ -8,10 +8,6 @@ class Firebase(object):
         self.url = url
 
     def _call(self, url, method, headers=None, params=None, data=None):
-        print('')
-        print('Firebase.call')
-        print('    ==>', url)
-        print('')
         return requests.request(method=method, url=url, params=params, data=data)
 
     def make_path(self, *paths):
